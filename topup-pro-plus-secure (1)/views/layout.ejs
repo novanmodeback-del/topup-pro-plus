@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head><% include partials_head %></head>
+  <body class="bg-gradient-to-b from-purple-50 to-white text-gray-900">
+    <header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold text-purple-700">TopUp <span class="text-amber-500">PRO</span></a>
+        <nav class="text-sm flex gap-4">
+          <a href="/admin" class="hover:underline">Admin</a>
+          <% if (user) { %><a href="/admin/logout">Logout</a><% } else { %><a href="/admin/login">Login</a><% } %>
+        </nav>
+      </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-6"><%- body %></main>
+    <footer class="border-t mt-8">
+      <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-500">© <%= new Date().getFullYear() %> <%= STORE_NAME %>.</div>
+    </footer>
+  </body>
+</html>

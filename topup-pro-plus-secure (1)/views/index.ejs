@@ -1,0 +1,1 @@
+<% layout('layout') -%><h1 class='text-3xl font-bold mb-4'>Top Up Game</h1><div class='grid grid-cols-2 md:grid-cols-4 gap-4'><% games.forEach(g=>{ %><a href='/game/<%= g.slug %>' class='card bg-white p-3'><div class='font-medium'><%= g.name %></div><div class='text-xs text-gray-500'><%= g.publisher||'' %></div></a><% }) %></div>
